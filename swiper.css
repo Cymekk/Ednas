@@ -1,0 +1,297 @@
+.links {
+	width: 60%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.links a {
+	cursor: pointer;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #352828;
+	font-size: 16px;
+	transition: opacity 0.3s;
+}
+
+.burger {
+	cursor: pointer;
+}
+
+/* MAIN */
+.company {
+	margin-top: 92px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.company .info {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+/* Images */
+
+.images {
+	display: flex;
+	margin-top: 32px;
+}
+
+.images img:nth-child(odd) {
+	width: 555px;
+	height: 272px;
+}
+
+.images img:nth-child(even) {
+	height: 272px;
+	margin: 0 16px;
+}
+
+/* about us */
+
+.about-us {
+	margin-top: 32px;
+	width: 32%;
+	line-height: 21px;
+}
+
+.about-us-btn {
+	display: flex;
+	align-items: center;
+	text-transform: uppercase;
+	margin-top: 12px;
+	cursor: pointer;
+}
+
+.about-us-btn img {
+	margin: 0 6px;
+}
+
+/* video section */
+.video {
+	margin-top: 32px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.video .video-box {
+	position: relative;
+}
+
+.video .video-box .play-icon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+}
+
+.video .text-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 40%;
+	text-align: center;
+	margin-top: 16px;
+	line-height: 21px;
+}
+
+/* projects */
+.projects {
+	margin-top: 64px;
+}
+
+.project-header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.project-header h2 {
+	text-transform: uppercase;
+	font-size: 40px;
+	font-weight: normal;
+}
+
+.swiper {
+	margin-top: 32px;
+	width: 100%;
+}
+
+.swiper-wrapper {
+	display: flex;
+	align-items: flex-end;
+}
+
+.swiper-slide {
+	width: 500px;
+	overflow: hidden;
+}
+
+.swiper-slide .slides {
+	object-fit: cover;
+}
+
+.swiper-slide .description {
+	display: flex;
+	align-items: center;
+	margin-top: 6px;
+	text-transform: uppercase;
+}
+
+.swiper-slide .description p {
+	margin-right: 6px;
+}
+
+/* .swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+} */
+
+/* .swiper-slide {
+	width: 80%;
+}
+
+.swiper-slide:nth-child(2n) {
+	width: 60%;
+}
+
+.swiper-slide:nth-child(3n) {
+	width: 40%;
+} */
+
+.discover {
+	margin-top: 64px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.discover .text {
+	width: 60%;
+}
+
+.discover .text h2 {
+	position: relative;
+	text-transform: uppercase;
+	font-size: 80px;
+	letter-spacing: -1px;
+	font-weight: normal;
+}
+
+.discover .text h2::before {
+	content: 'discover your';
+	position: absolute;
+	transform: translate(-55%, -100%);
+}
+
+.discover .text p {
+	margin-top: 32px;
+	width: 40%;
+}
+
+/* footer */
+
+.footer {
+	width: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 40px;
+}
+
+.upper-part {
+	display: flex;
+	justify-content: space-between;
+}
+
+.links-box {
+	width: 50%;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.box {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: space-between;
+}
+
+.box p {
+	margin-bottom: 12px;
+}
+
+.box ul {
+	list-style: none;
+	line-height: 22px;
+}
+
+.bottom-part {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 32px;
+	font-family: 'Helvetica Neue';
+	font-size: 14px;
+}
+
+hr {
+	width: 100%;
+	max-width: 1360px;
+	margin: 0 auto;
+}
+
+/* video popup */
+
+.popup {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 60;
+	transform: translateY(-100%);
+	opacity: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: transform 0.3s, opacity 0.3s;
+}
+
+.popup-body {
+	width: 80%;
+	max-width: 600px;
+	background-color: #f2f2f2;
+	padding: 20px;
+	border-radius: 5px;
+}
+
+iframe {
+	width: 100%;
+	height: 400px;
+}
+
+.close-popup {
+	display: block;
+	margin: 12px auto;
+	padding: 1em 2em;
+	cursor: pointer;
+	border: none;
+	border-radius: 5px;
+	background-color: #352828;
+	color: #f2f2f2;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.close-popup:hover {
+	color: #352828;
+	background-color: #d4d4d4;
+}
+
+.active {
+	transform: translateY(0);
+	opacity: 1;
+}

@@ -1,0 +1,481 @@
+@font-face {
+	font-family: 'PP Mori';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/PPMori-Regular.otf');
+}
+
+@font-face {
+	font-family: 'Helvetica Neue';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/HelveticaNeueRoman.otf');
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	position: relative;
+	background-color: #f2f2f2;
+	color: #352828;
+	font-family: 'PP Mori';
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 40px;
+	overflow: hidden;
+}
+
+.header {
+	position: fixed;
+	width: 100%;
+	background-color: #f2f2f2;
+	z-index: 50;
+}
+
+.navbar {
+	padding: 40px;
+	display: flex;
+	justify-content: flex-end;
+
+	.links {
+		display: none;
+	}
+}
+
+.company {
+	margin-top: 64px;
+
+	.logo {
+		width: 100%;
+	}
+
+	.info {
+		margin: 16px 0;
+		display: flex;
+		gap: 5px;
+	}
+}
+
+.images {
+	img {
+		width: 100%;
+
+		&:nth-child(2) {
+			display: none;
+		}
+		&:nth-child(3) {
+			display: none;
+		}
+	}
+}
+
+.about-us-btn {
+	margin-top: 16px;
+}
+
+.about-us {
+	margin-bottom: 16px;
+	&-text {
+		margin: 16px 0;
+	}
+}
+
+.video {
+	.video-box {
+		position: relative;
+
+		img:first-child {
+			width: 100%;
+		}
+
+		.play-icon {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			cursor: pointer;
+			z-index: 20;
+		}
+	}
+
+	.text-box {
+		margin-top: 16px;
+	}
+}
+
+.projects {
+	margin-top: 32px;
+
+	.project-header {
+		display: flex;
+		justify-content: space-between;
+
+		h2 {
+			text-transform: uppercase;
+			font-size: 32px;
+			font-weight: normal;
+		}
+	}
+}
+
+.swiper {
+	margin-top: 32px;
+
+	.swiper-wrapper {
+		display: flex;
+		align-items: flex-end;
+	}
+
+	.slides {
+		width: 100%;
+	}
+}
+
+.discover {
+	margin-top: 32px;
+	position: relative;
+	margin-bottom: 40px;
+
+	.discover-img {
+		width: 100%;
+	}
+
+	.text {
+		background-color: rgba(255, 255, 255, 0.65);
+		padding: 16px;
+		position: absolute;
+		bottom: 0;
+	}
+}
+
+.footer {
+	width: 100%;
+	max-width: 1440px;
+	padding: 40px;
+	padding-top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		span,
+		p {
+			margin: 12px 0;
+			font-weight: bold;
+		}
+	}
+
+	ul {
+		list-style: none;
+
+		li {
+			margin: 6px;
+		}
+	}
+
+	.bottom-part {
+		margin-top: 16px;
+		font-size: 14px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 6px;
+	}
+}
+
+.popup {
+	position: fixed;
+	inset: 0;
+	background-color: rgba(0, 0, 0, 0.65);
+	z-index: 50;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	transform: translateY(-150%);
+	opacity: 0;
+	transition: transform 0.3s, opacity 0.3s;
+
+	.popup-body {
+		width: 80%;
+		max-width: 600px;
+		background-color: #f2f2f2;
+		padding: 16px;
+		border-radius: 5px;
+
+		.close-popup {
+			background-color: #352828;
+			color: #f2f2f2;
+			padding: 1em 2em;
+			display: block;
+			margin: 0 auto;
+			border-radius: 5px;
+			border: none;
+			transition: background-color 0.3s, color 0.3s;
+
+			&:hover {
+				background-color: #b1b1b1;
+				color: #352828;
+			}
+		}
+
+		iframe {
+			width: 100%;
+			height: 400px;
+		}
+	}
+}
+
+.active {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+//
+//
+//MEDIA
+//
+//
+@media (min-width: 768px) {
+	.navbar {
+		padding: 40px;
+		display: flex;
+		justify-content: space-between;
+
+		.links {
+			width: 70%;
+			display: flex;
+			justify-content: space-between;
+
+			a {
+				transition: opacity 0.3s;
+				text-decoration: none;
+				text-transform: uppercase;
+				cursor: pointer;
+				color: #352828;
+			}
+		}
+	}
+
+	.company {
+		margin-top: 64px;
+		display: flex;
+		justify-content: space-between;
+
+		.logo {
+			width: 80%;
+		}
+
+		.info {
+			margin: 24px 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+		}
+	}
+
+	.images {
+		width: 100%;
+		margin-top: 32px;
+		display: flex;
+		justify-content: space-between;
+		gap: 12px;
+
+		img {
+			width: 32%;
+			height: 200px;
+
+			&:nth-child(2) {
+				display: block;
+			}
+			&:nth-child(3) {
+				display: block;
+			}
+		}
+	}
+
+	.discover {
+		margin-top: 64px;
+		display: flex;
+		align-items: flex-end;
+
+		.discover-img {
+			width: 40%;
+		}
+
+		h2 {
+			position: relative;
+			text-transform: uppercase;
+			margin-bottom: 16px;
+			font-size: 45px;
+
+			&::before {
+				content: 'discover your';
+				position: absolute;
+				transform: translate(-55%, -100%);
+			}
+		}
+
+		.text {
+			padding-bottom: 0;
+			position: relative;
+			background: none;
+		}
+	}
+
+	.footer {
+		display: block;
+
+		.upper-part {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.links-box {
+			width: 50%;
+			display: flex;
+			justify-content: space-evenly;
+		}
+
+		.bottom-part {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	.navbar {
+		max-width: 1440px;
+		margin: 0 auto;
+
+		.links {
+			width: 70%;
+			display: flex;
+			justify-content: space-between;
+
+			a {
+				transition: opacity 0.3s;
+				text-decoration: none;
+				text-transform: uppercase;
+				cursor: pointer;
+				color: #352828;
+			}
+		}
+	}
+
+	.company {
+		margin-top: 92px;
+		align-items: flex-start;
+
+		.logo {
+			width: 80%;
+		}
+
+		.info {
+			margin: 0;
+		}
+	}
+
+	.images {
+		width: 100%;
+		margin-top: 32px;
+		display: flex;
+		justify-content: space-between;
+		gap: 12px;
+
+		img {
+			width: 40%;
+		}
+	}
+
+	.about-us {
+		width: 40%;
+		line-height: 21px;
+	}
+
+	.video-box {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.text-box {
+		width: 40%;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.discover {
+		justify-content: space-between;
+
+		h2 {
+			margin: 32px 0;
+			padding: 0;
+			font-size: 48px;
+		}
+
+		.text {
+			width: 450px;
+		}
+	}
+}
+
+@media (min-width: 1280px) {
+	.images {
+		width: 100%;
+		margin-top: 32px;
+		display: flex;
+		justify-content: space-between;
+		gap: 12px;
+
+		img {
+			width: 40%;
+			height: 250px;
+
+			&:nth-child(2) {
+				width: 20%;
+			}
+		}
+	}
+
+	.about-us {
+		margin: 32px 0;
+	}
+
+	.discover {
+		h2 {
+			font-size: 80px;
+
+			&::before {
+				width: 150%;
+				transform: translate(-36.5%, -100%);
+			}
+		}
+
+		.text {
+			width: 50%;
+		}
+	}
+}
+
+.footer {
+	max-width: 1440px;
+	margin: 0 auto;
+}

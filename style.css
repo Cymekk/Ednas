@@ -1,0 +1,407 @@
+@font-face {
+  font-family: "PP Mori";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/PPMori-Regular.otf");
+}
+@font-face {
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/HelveticaNeueRoman.otf");
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background-color: #f2f2f2;
+  color: #352828;
+  font-family: "PP Mori";
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px;
+  overflow: hidden;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: #f2f2f2;
+  z-index: 50;
+}
+
+.navbar {
+  padding: 40px;
+  display: flex;
+  justify-content: flex-end;
+}
+.navbar .links {
+  display: none;
+}
+
+.company {
+  margin-top: 64px;
+}
+.company .logo {
+  width: 100%;
+}
+.company .info {
+  margin: 16px 0;
+  display: flex;
+  gap: 5px;
+}
+
+.images img {
+  width: 100%;
+}
+.images img:nth-child(2) {
+  display: none;
+}
+.images img:nth-child(3) {
+  display: none;
+}
+
+.about-us-btn {
+  margin-top: 16px;
+}
+
+.about-us {
+  margin-bottom: 16px;
+}
+.about-us-text {
+  margin: 16px 0;
+}
+
+.video .video-box {
+  position: relative;
+}
+.video .video-box img:first-child {
+  width: 100%;
+}
+.video .video-box .play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 20;
+}
+.video .text-box {
+  margin-top: 16px;
+}
+
+.projects {
+  margin-top: 32px;
+}
+.projects .project-header {
+  display: flex;
+  justify-content: space-between;
+}
+.projects .project-header h2 {
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: normal;
+}
+
+.swiper {
+  margin-top: 32px;
+}
+.swiper .swiper-wrapper {
+  display: flex;
+  align-items: flex-end;
+}
+.swiper .slides {
+  width: 100%;
+}
+
+.discover {
+  margin-top: 32px;
+  position: relative;
+  margin-bottom: 40px;
+}
+.discover .discover-img {
+  width: 100%;
+}
+.discover .text {
+  background-color: rgba(255, 255, 255, 0.65);
+  padding: 16px;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer {
+  width: 100%;
+  max-width: 1440px;
+  padding: 40px;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer .box span,
+.footer .box p {
+  margin: 12px 0;
+  font-weight: bold;
+}
+.footer ul {
+  list-style: none;
+}
+.footer ul li {
+  margin: 6px;
+}
+.footer .bottom-part {
+  margin-top: 16px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.popup {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-150%);
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.popup .popup-body {
+  width: 80%;
+  max-width: 600px;
+  background-color: #f2f2f2;
+  padding: 16px;
+  border-radius: 5px;
+}
+.popup .popup-body .close-popup {
+  background-color: #352828;
+  color: #f2f2f2;
+  padding: 1em 2em;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+.popup .popup-body .close-popup:hover {
+  background-color: #b1b1b1;
+  color: #352828;
+}
+.popup .popup-body iframe {
+  width: 100%;
+  height: 400px;
+}
+
+.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .navbar .links {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .navbar .links a {
+    transition: opacity 0.3s;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #352828;
+  }
+  .company {
+    margin-top: 64px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .company .logo {
+    width: 80%;
+  }
+  .company .info {
+    margin: 24px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .images {
+    width: 100%;
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .images img {
+    width: 32%;
+    height: 200px;
+  }
+  .images img:nth-child(2) {
+    display: block;
+  }
+  .images img:nth-child(3) {
+    display: block;
+  }
+  .discover {
+    margin-top: 64px;
+    display: flex;
+    align-items: flex-end;
+  }
+  .discover .discover-img {
+    width: 40%;
+  }
+  .discover h2 {
+    position: relative;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    font-size: 45px;
+  }
+  .discover h2::before {
+    content: "discover your";
+    position: absolute;
+    transform: translate(-55%, -100%);
+  }
+  .discover .text {
+    padding-bottom: 0;
+    position: relative;
+    background: none;
+  }
+  .footer {
+    display: block;
+  }
+  .footer .upper-part {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer .links-box {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .footer .bottom-part {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1024px) {
+  .navbar {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .navbar .links {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .navbar .links a {
+    transition: opacity 0.3s;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #352828;
+  }
+  .company {
+    margin-top: 92px;
+    align-items: flex-start;
+  }
+  .company .logo {
+    width: 80%;
+  }
+  .company .info {
+    margin: 0;
+  }
+  .images {
+    width: 100%;
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .images img {
+    width: 40%;
+  }
+  .about-us {
+    width: 40%;
+    line-height: 21px;
+  }
+  .video-box {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .text-box {
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .discover {
+    justify-content: space-between;
+  }
+  .discover h2 {
+    margin: 32px 0;
+    padding: 0;
+    font-size: 48px;
+  }
+  .discover .text {
+    width: 450px;
+  }
+}
+@media (min-width: 1280px) {
+  .images {
+    width: 100%;
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .images img {
+    width: 40%;
+    height: 250px;
+  }
+  .images img:nth-child(2) {
+    width: 20%;
+  }
+  .about-us {
+    margin: 32px 0;
+  }
+  .discover h2 {
+    font-size: 80px;
+  }
+  .discover h2::before {
+    width: 150%;
+    transform: translate(-36.5%, -100%);
+  }
+  .discover .text {
+    width: 50%;
+  }
+}
+.footer {
+  max-width: 1440px;
+  margin: 0 auto;
+}/*# sourceMappingURL=style.css.map */
